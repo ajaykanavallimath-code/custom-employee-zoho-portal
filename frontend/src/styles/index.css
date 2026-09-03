@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Design System Tokens & Theme Variables
+   Enterprise Dark Theme - Custom Employee Portal with Zoho One Integration
+   ========================================================================== */
+
+:root {
+  /* Enforce native dark mode rendering for browser controls (dropdowns, scrollbars, pickers) */
+  color-scheme: dark;
+
+  /* Color Palette - Dark Enterprise Modern */
+  --bg-app: #090d16;
+  --bg-surface: #0f172a;
+  --bg-surface-elevated: #1e293b;
+  --bg-surface-hover: #26354a;
+  --bg-glass: rgba(15, 23, 42, 0.85);
+  --bg-glass-elevated: rgba(30, 41, 59, 0.95);
+
+  /* Primary Brand (Zoho Indigo / Cobalt) */
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: #6366f1;
+  --primary-glow: rgba(99, 102, 241, 0.3);
+  --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+
+  /* Accent & Category Colors (High Luminosity & Contrast) */
+  --accent-emerald: #10b981;
+  --accent-emerald-bg: rgba(16, 185, 129, 0.16);
+  --accent-emerald-border: rgba(16, 185, 129, 0.4);
+
+  --accent-blue: #3b82f6;
+  --accent-blue-bg: rgba(59, 130, 246, 0.16);
+  --accent-blue-border: rgba(59, 130, 246, 0.4);
+
+  --accent-amber: #f59e0b;
+  --accent-amber-bg: rgba(245, 158, 11, 0.16);
+  --accent-amber-border: rgba(245, 158, 11, 0.4);
+
+  --accent-purple: #8b5cf6;
+  --accent-purple-bg: rgba(139, 92, 246, 0.16);
+  --accent-purple-border: rgba(139, 92, 246, 0.4);
+
+  --accent-rose: #f43f5e;
+  --accent-rose-bg: rgba(244, 63, 94, 0.16);
+  --accent-rose-border: rgba(244, 63, 94, 0.4);
+
+  /* Text & Typography (Enhanced Contrast Ratios) */
+  --text-main: #f8fafc;        /* Slate 50 - High contrast pure text */
+  --text-secondary: #cbd5e1;   /* Slate 300 - Crisp readable secondary text (contrast 9.8:1) */
+  --text-muted: #94a3b8;       /* Slate 400 - High contrast subtle text (contrast 6.5:1) */
+  --text-inverse: #0f172a;
+
+  /* Borders & Dividers (Distinct Visibility) */
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-medium: rgba(255, 255, 255, 0.22);
+  --border-focus: #6366f1;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 25px rgba(79, 70, 229, 0.25);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+/* ==========================================================================
+   CSS Reset & Base
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+code, pre, .mono {
+  font-family: 'JetBrains Mono', monospace;
+  color: #a5b4fc;
+}
+
+a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: #a5b4fc;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: var(--text-main);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--primary-light);
+  cursor: pointer;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
